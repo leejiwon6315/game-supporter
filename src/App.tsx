@@ -1,7 +1,11 @@
 import React from "react";
+import { HomeViewController } from "./domains/home/Home.view.controller";
+import { useHomeViewModel } from "./domains/home/Home.view.model";
 
 function App(): JSX.Element {
-  return <div className="App"></div>;
+  const viewModel = useHomeViewModel();
+
+  return <HomeViewController viewModel={viewModel} />;
 }
 
 export default App;
