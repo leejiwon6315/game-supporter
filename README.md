@@ -9,17 +9,24 @@
 <br/>
 
 ## ✍️ Service (예정)
-
 - [ ] 대시보드
 - [ ] 인원 선택
 - [ ] 팀/개인전 선택
 - [ ] 점수 책정 방식 선택(차감식, 가산식, 합산식 등)
 - [ ] 포인트 책정
-
 <br/>
 <br/>
 
-## 🔧 Development Stack (예정)
+## 📝 Study point
+- [ ] MVVM 패턴 적용해보기
+- [ ] Context 적용해보기
+- [ ] Error Boundaries 적용해보기
+- [ ] D3.js 사용하여 차트 그려보기
+- [ ] Clean Code 작성하기
+<br/>
+<br/>
+
+## 🔧 Development Stack
 
 #### Front-End
 
