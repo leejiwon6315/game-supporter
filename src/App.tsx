@@ -1,11 +1,14 @@
 import React from "react";
-import { HomeViewController } from "./domains/home/Home.view.controller";
-import { useHomeViewModel } from "./domains/home/Home.view.model";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "@shared/styles/globalStyles";
+import Theme from "@shared/styles/theme";
 
 function App(): JSX.Element {
-  const viewModel = useHomeViewModel();
-
-  return <HomeViewController viewModel={viewModel} />;
+  return (
+    <ThemeProvider theme={Theme}>
+      <GlobalStyles />
+    </ThemeProvider>
+  );
 }
 
 export default App;

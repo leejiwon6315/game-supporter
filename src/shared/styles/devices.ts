@@ -1,0 +1,5 @@
+export enum DEVICES {
+  MOBILE_MIN_WIDTH = 375,
+  MOBILE_MAX_WIDTH = 600,
+  PC_MAX_WIDTH = 1240,
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import { ViewController } from "../../core/ViewController";
+import { ViewControllerProps } from "@core/ViewController";
 import { HomeView } from "./Home.view";
 import { HomeViewModel } from "./Home.view.model";
 
-export const HomeViewController: ViewController<HomeViewModel> = React.memo(
-  ({ viewModel }) => {
-    return <HomeView {...viewModel} />;
-  }
-);
+function HomeViewController({ viewModel }: ViewControllerProps<HomeViewModel>) {
+  return <HomeView {...viewModel} />;
+}
+
+export default React.memo(HomeViewController);
