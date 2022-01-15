@@ -1,3 +1,1 @@
-export type ViewModel<ViewModelHook extends (...args: any) => any> = ReturnType<
-  ViewModelHook
->;
+export type ViewModel<ViewModelHook extends (...args: any) => any> = ReturnType<ViewModelHook>;
