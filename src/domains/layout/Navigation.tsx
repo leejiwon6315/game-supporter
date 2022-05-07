@@ -1,14 +1,28 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Navigation = function navigation() {
   return (
     <NavigationContainer>
-      <Logo>Game-Supporter</Logo>
+      <MenuSection>
+        <Logo>Game-Supporter</Logo>
+      </MenuSection>
+      <UserSection></UserSection>
     </NavigationContainer>
   );
 };
 
-const NavigationContainer = styled('nav')``;
+const NavigationContainer = styled.nav`
+  width: 100%;
 
-const Logo = styled('button')``;
+  @media (min-width: ${({ theme: { device } }) => device.pc.minWidth}px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 ${({ theme }) => theme.spacing(10)};
+  }
+`;
+
+const MenuSection = styled.div``;
+
+const UserSection = styled.div``;
+
+const Logo = styled.button``;

@@ -1,7 +1,7 @@
-import { css } from '@emotion/react';
+import { createGlobalStyle } from 'styled-components';
 import { DEVICES } from './devices';
 
-export const globalStyle = css`
+export const GlobalStyle = createGlobalStyle`
   @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
   html,

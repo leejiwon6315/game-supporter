@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components';
 import { DEVICES } from './devices';
 
 const color = {
@@ -16,8 +17,8 @@ const fontSize = {
   default: '1rem',
 };
 
-const spacing = (value: number) => {
-  return `${value * 2}px`;
+const spacing = (value: number | string) => {
+  return `${Number(value) * 2}px`;
 };
 
 const device = {
@@ -31,7 +32,8 @@ const device = {
   },
 };
 
-export const theme = {
+const Theme: DefaultTheme = {
+  // theme 추가시 types/styled.d.ts 에 타입 추가
   font,
   fontSize,
   spacing,
@@ -39,18 +41,4 @@ export const theme = {
   device,
 };
 
-export type ThemeColorType = keyof typeof color;
-export type ThemeFontType = keyof typeof font;
-export type ThemeFontSizeType = keyof typeof fontSize;
-export type ThemeSpaceType = keyof typeof spacing;
-export type ThemeDeviceType = keyof typeof device;
-
-declare module '@emotion/react' {
-  export interface Theme {
-    font: typeof font;
-    fontSize: typeof fontSize;
-    space: typeof spacing;
-    color: typeof color;
-    device: typeof device;
-  }
-}
+export default Theme;
