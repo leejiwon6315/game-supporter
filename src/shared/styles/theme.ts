@@ -31,15 +31,13 @@ const device = {
   },
 };
 
-const theme = {
+export const theme = {
   font,
   fontSize,
   spacing,
   color,
   device,
 };
-
-export default theme;
 
 export type ThemeColorType = keyof typeof color;
 export type ThemeFontType = keyof typeof font;
